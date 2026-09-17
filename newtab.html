@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>新标签页</title>
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <div id="bg"></div>
+  <div id="scrim"></div>
+
+  <main>
+    <form id="searchForm" autocomplete="off">
+      <input id="q" type="text" placeholder="搜索网页" spellcheck="false" autofocus>
+      <button type="submit" id="goBtn" aria-label="搜索">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path>
+        </svg>
+      </button>
+    </form>
+  </main>
+
+  <span id="weather" hidden></span>
+
+  <div id="wxTip" hidden>
+    <div id="wxTipMain"></div>
+    <div id="wxTipSub"></div>
+    <div id="wxTipFoot"></div>
+  </div>
+
+  <button id="gearBtn" aria-label="设置">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="3"></circle>
+      <path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5v.2a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"></path>
+    </svg>
+  </button>
+
+  <div id="caption">
+    <span id="capText"></span>
+    <div id="capNav">
+      <button id="prevBtn" title="更早一天的壁纸">前一天</button>
+      <button id="nextBtn" title="更晚一天的壁纸">后一天</button>
+      <button id="todayBtn" title="回到最新一天的壁纸">回到最新</button>
+    </div>
+  </div>
+
+  <div id="panel" hidden>
+    <div class="row">
+      <label for="resSel">壁纸清晰度</label>
+      <select id="resSel">
+        <option value="uhd">4K 原图</option>
+        <option value="1920x1080">1080P</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="dimRange">压暗 <span id="dimVal"></span></label>
+      <input id="dimRange" type="range" min="0" max="60" step="5">
+    </div>
+    <div class="row">
+      <label for="blurRange">模糊 <span id="blurVal"></span></label>
+      <input id="blurRange" type="range" min="0" max="20" step="1">
+    </div>
+    <div class="row">
+      <label for="capChk">显示图片说明</label>
+      <input id="capChk" type="checkbox">
+    </div>
+    <div class="row">
+      <label for="lockChk" title="锁定后壁纸不再跟着日期更换">锁定当前壁纸</label>
+      <input id="lockChk" type="checkbox">
+    </div>
+    <div class="row citylabel">
+      <label for="cityInput">天气城市</label>
+      <span id="cityNow"></span>
+    </div>
+    <input id="cityInput" type="text" placeholder="输入城市或区名，如 海淀" autocomplete="off">
+    <div id="cityResults"></div>
+    <div class="row actions">
+      <button id="dlBtn">下载这张壁纸</button>
+      <button id="closeBtn">完成</button>
+    </div>
+  </div>
+</body>
+<script src="config.js"></script>
+<script src="shared.js"></script>
+<script src="newtab.js"></script>
+</html>

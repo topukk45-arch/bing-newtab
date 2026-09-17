@@ -1,0 +1,9 @@
+# 含 API Key，只留在本地
+config.js
+*.zip
+*.crx
+*.pem
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

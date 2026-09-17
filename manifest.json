@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "必应壁纸标签页",
+  "version": "1.6.0",
+  "description": "每天自动更换为必应中国区当日壁纸的极简新标签页：壁纸、搜索框，外加可选的天气。",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "background": {
+    "service_worker": "bg.js"
+  },
+  "permissions": ["storage", "alarms"],
+  "host_permissions": [
+    "https://www.bing.com/*",
+    "https://cn.bing.com/*",
+    "https://*.qweatherapi.com/*",
+    "https://*.qweather.com/*"
+  ]
+}
