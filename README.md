@@ -50,3 +50,13 @@ Chrome / Edge 扩展。把新标签页换成必应中国区当日壁纸，只有
 - 天气：[和风天气](https://www.qweather.com/)
 
 壁纸图片版权归各自的摄影师及版权方所有。
+
+## 许可证 / License
+
+© 2026 Yake（[topukk45-arch](https://github.com/topukk45-arch)）。
+
+本项目以 [PolyForm Noncommercial 1.0.0](LICENSE) 授权：可以自由学习、个人使用和修改，**禁止任何商业用途**。如需商用，请先联系作者。
+
+项目中引用的第三方字体、图标、库及其他素材，仍按其各自的许可证授权。
+
+This project is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). Commercial use is not permitted.
